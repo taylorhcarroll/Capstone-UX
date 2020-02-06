@@ -1,0 +1,30 @@
+{
+    "users": [
+        {
+        "id": "",
+        "userPic": "",
+        "displayName": "",
+        "spotifyId": ""
+        }
+    ],
+    "followers": [
+        ""
+    ],
+    "reccomended": [
+        ""
+    ],
+    "playLists": [
+        ""
+    ],
+    "playListSongs": [
+        ""
+    ],
+    "pins": [
+        ""
+    ],
+    "songs": [
+        ""
+    ]
+
+}
+
