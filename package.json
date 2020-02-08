@@ -13,6 +13,7 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "2.1.8",
     "react-spotify-login": "^0.9.1",
+    "reactstrap": "^8.4.1",
     "spotify-web-api-js": "^1.2.0",
     "superagent": "^5.1.0"
   },
