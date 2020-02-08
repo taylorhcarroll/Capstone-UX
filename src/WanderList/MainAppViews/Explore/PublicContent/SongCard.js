@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import { Button } from "reactstrap";
-import "./Searchfield.css";
+// this is the search results for playlists based on the map coords or search string
+// import "./SongCard.css";
 
 export class SongCard extends Component {
   // handleInput = evt => {
