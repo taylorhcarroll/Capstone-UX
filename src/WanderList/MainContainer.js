@@ -3,6 +3,7 @@ import ApplicationViews from './ApplicationViews'
 import NowPlaying from './NowPlaying'
 import Navbar from './Navbar'
 import Spotify from "spotify-web-api-js";
+import DataManager from './Handlers/DataManager'
 
 //allows you to use the spotify-web-api-js functions
 const spotifyApi = new Spotify();
@@ -13,6 +14,7 @@ class MainContainer extends Component {
 
     state = {
         user: '',
+        newUser: '',
         spotifyId: ''
     }
 
@@ -31,8 +33,42 @@ class MainContainer extends Component {
     setUser = spotifyId => {
         sessionStorage.setItem('activeUser', spotifyId);
       };
+
+      //grabs needed info from spotify for the current user and post to database
+  handleLogin = () => {
+    spotifyApi
+      .getMe()
+      .then(response => {
+          console.log("spotify info", response)
+        const newUser = {
+          userName: response.display_name,
+          spotifyId: response.id,
+          userImage: response.images[0].url
+        };
+        this.setState({ spotifyId: response.id });
+        sessionStorage.setItem("spotifyId", response.id);
+        sessionStorage.setItem("SpotifyName", response.display_name);
+        this.setState({ newUser: newUser });
+        return response;
+      })
+      .then(response => {
+        console.log("what is being passed to checkUser", response.id);
+        DataManager.checkUser(response.id).then(
+          checkedUsers => {
+            if (checkedUsers.length > 0) {
+                console.log(checkedUsers, "and", response.id, "this user already exists, no post to DB")
+            //   this.setState({ test: "hello" });
+            } else {
+              DataManager.postUser(this.state.newUser);
+              console.log(checkedUsers, "and", response.id, "this user is new, posted to DB")
+            //   this.setState({ test: "hello2" });
+            }
+          }
+        );
+      });
+  }
     componentDidMount() {
-        this.getCurrentUser()
+        this.handleLogin()
     }
 
     render() {
