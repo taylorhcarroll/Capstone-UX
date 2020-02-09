@@ -43,7 +43,8 @@ class NowPlaying extends Component {
           beforeSend: (xhr) => {
             xhr.setRequestHeader("Authorization", "Bearer " + token);
           },
-          success: (data) => {
+          if (data) {
+           {
             console.log("data", data);
             this.setState({
               username: data.id,
@@ -52,6 +53,7 @@ class NowPlaying extends Component {
               progress_ms: data.progress_ms,
             });
           }
+        }
         });
       }
     render() {
