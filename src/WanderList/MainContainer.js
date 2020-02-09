@@ -57,11 +57,9 @@ class MainContainer extends Component {
           checkedUsers => {
             if (checkedUsers.length > 0) {
                 console.log(checkedUsers, "and", response.id, "this user already exists, no post to DB")
-            //   this.setState({ test: "hello" });
             } else {
               DataManager.postUser(this.state.newUser);
               console.log(checkedUsers, "and", response.id, "this user is new, posted to DB")
-            //   this.setState({ test: "hello2" });
             }
           }
         );

@@ -21,20 +21,6 @@ class NowPlaying extends Component {
         };
         this.getCurrentlyPlaying = this.getCurrentlyPlaying.bind(this);
       }
-
-    componentDidMount() {
-        // Set token
-        let _token = hash.access_token;
-
-        if (_token) {
-          // Set token
-          this.setState({
-            token: _token
-          });
-          this.getCurrentlyPlaying(_token);
-        }
-      }
-
       getCurrentlyPlaying(token) {
         // Make a call using the token
         $.ajax({
@@ -56,6 +42,19 @@ class NowPlaying extends Component {
         }
         });
       }
+    componentDidMount() {
+        // Set token
+        let _token = hash.access_token;
+
+        if (_token) {
+          // Set token
+          this.setState({
+            token: _token
+          });
+          this.getCurrentlyPlaying(_token);
+        }
+      }
+
     render() {
 		return (
 <>
