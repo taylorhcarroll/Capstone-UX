@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ApplicationViews from './ApplicationViews'
-import NowPlaying from './NowPlaying'
+// import NowPlaying from './NowPlaying'
+import currentPlayer from './MainAppViews/WS-bridge/nowPlaying'
 import Navbar from './Navbar'
 import Spotify from "spotify-web-api-js";
 import DataManager from './Handlers/DataManager'
@@ -80,7 +81,7 @@ class MainContainer extends Component {
                         activeUser={this.state.activeUser}
                         {...this.props} />
                     : <h3>No token for you!</h3>}
-                <NowPlaying
+                <currentPlayer
                     token={this.state.token}
                     {...this.props}
                     activeUser={this.state.activeUser} />
