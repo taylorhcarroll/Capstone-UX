@@ -29,7 +29,7 @@ class NowPlaying extends Component {
           beforeSend: (xhr) => {
             xhr.setRequestHeader("Authorization", "Bearer " + token);
           },
-          if (data) {
+          success: (data) =>{
            {
             console.log("data", data);
             this.setState({
@@ -39,6 +39,12 @@ class NowPlaying extends Component {
               progress_ms: data.progress_ms,
             });
           }
+        },
+        error: () => {
+            this.setState({
+                item: "Nothing",
+                is_playing: "Nothing is playing",
+              });
         }
         });
       }

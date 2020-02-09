@@ -7,7 +7,12 @@ import UserDash from './UserDash'
 import YourProfile from "./YourProfile";
 import YourLibrary from "./YourLibrary";
 import * as $ from "jquery";
+import Spotify from "spotify-web-api-js";
 
+
+const spotifyAPI = new Spotify();
+const spotifyToken = sessionStorage.getItem("userToken")
+spotifyAPI.setAccessToken(spotifyToken)
 export default class ApplicationViews extends Component {
 
 //decide later if putting here due to possible web socket integration//
@@ -19,7 +24,7 @@ export default class ApplicationViews extends Component {
           beforeSend: (xhr) => {
             xhr.setRequestHeader("Authorization", "Bearer " + token);
           },
-          if (data) {
+          success: (data) =>{
            {
             console.log("data", data);
             this.setState({
@@ -29,6 +34,12 @@ export default class ApplicationViews extends Component {
               progress_ms: data.progress_ms,
             });
           }
+        },
+        error: () => {
+            this.setState({
+                item: "Nothing",
+                is_playing: "Nothing is playing",
+              });
         }
         });
       }
