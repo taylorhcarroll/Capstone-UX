@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import * as $ from "jquery";
 import hash from "../hash";
 import Player from "../Player"
+
+//This needs to be either relocated inside each main app view section or the ws-bridge branch needs to be integrated. I will have to make due. WS is possible but will need assistance, do as stretch goal or post graduation.
 class NowPlaying extends Component {
 
     constructor() {
