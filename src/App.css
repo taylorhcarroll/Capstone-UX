@@ -69,7 +69,7 @@ body {
 
 .btn:hover {
   background: #1ecd97;
-  color: #333;
+  /* color: #333; */
 }
 
 .btn--login {

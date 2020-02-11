@@ -1,34 +1,92 @@
 {
   "users": [
     {
-      "id": "1234",
-      "userPic": "test",
-      "displayName": "TEST",
-      "spotifyId": "TEST"
-    },
-    {
       "userName": "tcarrol4",
       "spotifyId": "tcarrol4",
       "userImage": "https://i.scdn.co/image/ab6775700000ee85243428d9ea4b049da0e47385",
-      "id": "wRiLaAK"
+      "id": 1
     }
   ],
-  "followers": [
-    ""
-  ],
-  "reccomended": [
-    ""
-  ],
-  "playLists": [
-    ""
-  ],
-  "playListSongs": [
-    ""
-  ],
-  "pins": [
-    ""
+  "followers": [],
+  "reccomended": [],
+  "playlists": [
+    {
+      "spotifyId": "tcarrol4",
+      "timeStamp": "Feb 11th 20",
+      "published": true,
+      "title": "test 1",
+      "description": "test 2",
+      "picURL": "placeholder.jpg",
+      "id": 1
+    },
+    {
+      "spotifyId": "tcarrol4",
+      "timeStamp": "Feb 11th 20",
+      "published": true,
+      "title": "test 2",
+      "description": "test 2",
+      "picURL": "placeholder.jpg",
+      "id": 2
+    }
   ],
   "songs": [
-    ""
+    {
+      "playlistId": 1,
+      "songId": "song 1",
+      "song_id": "song 1",
+      "song_uri": "song 1",
+      "id": 1
+    },
+    {
+      "playlistId": 1,
+      "songId": "song 2",
+      "song_id": "song 2",
+      "song_uri": "song 2",
+      "id": 2
+    },
+    {
+      "playlistId": 1,
+      "songId": "song 3",
+      "song_id": "song 3",
+      "song_uri": "song 3",
+      "id": 3
+    },
+    {
+      "playlistId": 2,
+      "songId": "song 1",
+      "song_id": "song 1",
+      "song_uri": "song 1",
+      "id": 4
+    },
+    {
+      "playlistId": 2,
+      "songId": "song 2",
+      "song_id": "song 2",
+      "song_uri": "song 2",
+      "id": 5
+    },
+    {
+      "playlistId": 2,
+      "songId": "song 3",
+      "song_id": "song 3",
+      "song_uri": "song 3",
+      "id": 6
+    }
+  ],
+  "pins": [
+    {
+      "address": "default search term",
+      "latitude": 36.1278331,
+      "longitude": 36.1278331,
+      "playlistId": 1,
+      "id": 1
+    },
+    {
+      "address": "default search term",
+      "latitude": 36.1278331,
+      "longitude": 36.1278331,
+      "playlistId": 2,
+      "id": 2
+    }
   ]
 }

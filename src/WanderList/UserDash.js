@@ -71,7 +71,9 @@ class UserDash extends Component {
                     </div>
                     :
                     <CreateNew
-                        />}
+                    showAddForm={this.showAddForm}
+                    userLocation={this.state.userLocation}
+                    {...this.props}/>}
                  </>
         )
             }

@@ -81,10 +81,18 @@ createPlaylist(playlistObject) {
   },
 
 // get songs by playlist
+// getPlaylistsbyUser(currentUserId) {
+//     console.log(`${remoteURL}/playlists?userId=${currentUserId}`)
+//     return fetch(
+//         `${remoteURL}/playlists/?userId=${currentUserId}&expand=song`
+//     ).then(response => response.json());
+// },
+
+// get songs by playlist and include the user info, songs, and pins
 getPlaylistsbyUser(currentUserId) {
-    console.log(`${remoteURL}/playlists?userId=${currentUserId}`)
+    console.log(`${remoteURL}/playlists?userId=${currentUserId}&embed=songs&embed=pins`)
     return fetch(
-        `${remoteURL}/playlists/?userId=${currentUserId}&expand=song`
+        `${remoteURL}/playlists/?userId=${currentUserId}&embed=songs&embed=pins`
     ).then(response => response.json());
 },
 
@@ -93,11 +101,11 @@ getAllPlaylists() {
   },
 
 // delete playlist
-deletePlaylist(id) {
-    return fetch(`${remoteURL}/playlists/${id}`, { method: "DELETE" }).then(
-      response => response.json()
-    );
-  },
+  deletePlaylist(id) {
+    return fetch(`${remoteURL}/playlists/${id}`, {
+        method: 'DELETE'
+    }).then(result => result.json());
+},
 
 // edit playlist
 editPlaylist(playlistObj, id) {
@@ -134,14 +142,14 @@ editPin(pinObject, id) {
 
 // get song
 getSong(id) {
-    return fetch(`${remoteURL}/playlistSongs/${id}`).then(response =>
+    return fetch(`${remoteURL}/songs/${id}`).then(response =>
       response.json()
     );
   },
 
 // add song
 addSong(songObject) {
-    return fetch(`${remoteURL}/playlistSongs`, {
+    return fetch(`${remoteURL}/songs`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -152,7 +160,7 @@ addSong(songObject) {
 
 // remove song
 removeSong(id) {
-    return fetch(`${remoteURL}/playlistSongs/${id}`, { method: "DELETE" }).then(
+    return fetch(`${remoteURL}/songs/${id}`, { method: "DELETE" }).then(
       response => response.json()
     );
   }

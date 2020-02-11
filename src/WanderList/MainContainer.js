@@ -67,6 +67,7 @@ class MainContainer extends Component {
   }
     componentDidMount() {
         this.handleLogin()
+        // this.getCurrentUser()
     }
 
     render() {
