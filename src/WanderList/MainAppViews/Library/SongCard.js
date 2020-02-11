@@ -23,9 +23,8 @@ class SongCard extends Component {
         return (
             <>
                 <p>songId: {this.props.song.id}</p>
-                <p>spotify: {this.props.song.song_id}</p>
+                <p>spotify: {this.props.song.spotifySong}</p>
                 <p>song_uri: {this.props.song.song_uri}</p>
-                <p>id: {this.props.song.id}</p>
                 <Button
                         className='addItemBtn'
                         // startIcon={<DeleteIcon />}

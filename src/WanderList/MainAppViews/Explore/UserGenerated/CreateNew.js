@@ -77,9 +77,8 @@ export class CreateNew extends Component {
     addTrack = (id) => {
         let songObj = {
             playlistId: this.state.playlistId,
-            songId: id,
-            song_id: id,
-            song_uri: id,
+            spotifySong: "song identifier",
+            song_uri: "uri",
         }
         console.log("addSong is Called", songObj)
         this.state.tracks.push(songObj)
