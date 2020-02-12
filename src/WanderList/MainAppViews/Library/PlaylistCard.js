@@ -4,8 +4,6 @@ import Button from '@material-ui/core/Button';
 
 class PlaylistCard extends Component {
     state = {
-        cars_users: [],
-        uniqueUsers: []
     };
     // getCarCardData = () => {
     //     CarManager.getUserbyCarId(this.props.activeUser).then(data => {

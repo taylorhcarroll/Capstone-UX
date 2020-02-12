@@ -78,7 +78,7 @@ export default class Mapper extends Component {
 	render() {
 
         let markers = []
-        this.state.pin.forEach(obj => {
+        this.state.pins.forEach(obj => {
             let coord = [obj.latitude, obj.longitude];
             markers.push(coord)
         })
