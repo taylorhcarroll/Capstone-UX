@@ -1,4 +1,3 @@
-![](public/images/logo.svg | width=100)
 # This is WanderList.
 
 WanderList is an application that allows you to search for and add playlists to a map.
