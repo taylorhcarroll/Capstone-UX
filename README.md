@@ -17,7 +17,7 @@ With the rise of online music playing applications, users can have access to mus
 
 I conducted an online survey using TypeForm and in-person interviews to get a better understanding of what tech users are already familiar with, and how they might think of music in the context of location. The quantitative research allowed me to be confident in where to draw my inspiration from in terms of how the user expect to use an app like Wanderlist.
 
-## TypeForm Survey:
+### TypeForm Survey:
 https://taylorcarroll997086.typeform.com/to/f2sfPv
 
 ## User Persona:
