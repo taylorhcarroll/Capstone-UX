@@ -60,6 +60,7 @@ class YourLibrary extends Component {
                         deletePlaylist={this.deletePlaylist}
                         editPlaylist={this.editPlaylist}
                         deleteSong={this.deleteSong}
+                        getData={this.getData}
                     />
                 ))}
 

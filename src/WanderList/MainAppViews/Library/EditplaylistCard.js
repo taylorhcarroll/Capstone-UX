@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import SongCard from './SongCard';
 import Button from '@material-ui/core/Button';
+import DataManager from '../../Handlers/DataManager';
+import moment from 'moment';
 
 class EditplaylistCard extends Component {
     state = {
@@ -14,8 +16,8 @@ class EditplaylistCard extends Component {
             address: '',
         },
         published: '',
-
-
+        timeStamp: '',
+        id: '',
     };
 
     handleInput = evt => {
@@ -28,6 +30,7 @@ class EditplaylistCard extends Component {
 
     componentDidMount() {
         this.setState({
+            id: this.props.yourPlayList.id,
             title: this.props.yourPlayList.title,
             description: this.props.yourPlayList.description,
             picURL: this.props.yourPlayList.picURL,
@@ -38,14 +41,35 @@ class EditplaylistCard extends Component {
                 address: this.props.yourPlayList.pins[0].address,
             },
             published: this.props.yourPlayList.published,
+            timeStamp: this.props.yourPlayList.timeStamp
         });
     }
+    editPlaylist = () => {
+        // this.setState({ loadingStatus: true });
+        const editedPlaylist = {
+            id: this.state.id,
+            picURL: this.state.picURL,
+            timeStamp: moment(new Date()).format("MMM Do YY"),
+            published: this.state.published,
+            title: this.state.title,
+            description: this.state.description,
+        };
 
+        DataManager.editPlaylist(editedPlaylist).then(this.props.getData).then(this.props.toggleEdit());
+    };
 
     render() {
         // console.log("users here", this.state.uniqueUsers)
         return (
             <>
+             <Button
+                        size="sm"
+                        color="info"
+                        className="editPlaylist"
+                        onClick={this.editPlaylist}
+                    >
+                        Submit
+                              </Button>
                 Title:<input
                     id="title"
                     type="text"
@@ -74,13 +98,13 @@ class EditplaylistCard extends Component {
                     id="address"
                     type="text"
                     onChange={this.handleInput}
-                    value={this.state.address} />
+                    value={this.state.pin.address} />
                 Lat:
                 <input
                     id="latitude"
                     type="text"
                     onChange={this.handleInput}
-                    value={this.state.pin.latitude}} />
+                    value={this.state.pin.latitude} />
                 Long:
                 <input
                     id="longitude"

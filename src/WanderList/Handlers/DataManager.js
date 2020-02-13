@@ -108,13 +108,13 @@ getAllPlaylists() {
 },
 
 // edit playlist
-editPlaylist(playlistObj, id) {
-    return fetch(`${remoteURL}/playlists/${id}`, {
+editPlaylist(editedPlaylist) {
+    return fetch(`${remoteURL}/playlists/${editedPlaylist.id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(playlistObj)
+      body: JSON.stringify(editedPlaylist)
     }).then(response => response.json());
   },
 
