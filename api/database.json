@@ -1,34 +1,124 @@
 {
   "users": [
     {
-      "id": "1234",
-      "userPic": "test",
-      "displayName": "TEST",
-      "spotifyId": "TEST"
-    },
-    {
       "userName": "tcarrol4",
       "spotifyId": "tcarrol4",
       "userImage": "https://i.scdn.co/image/ab6775700000ee85243428d9ea4b049da0e47385",
-      "id": "wRiLaAK"
+      "id": 1
     }
   ],
-  "followers": [
-    ""
-  ],
-  "reccomended": [
-    ""
-  ],
-  "playLists": [
-    ""
-  ],
-  "playListSongs": [
-    ""
-  ],
-  "pins": [
-    ""
+  "followers": [],
+  "reccomended": [],
+  "playlists": [
+    {
+      "spotifyId": "tcarrol4",
+      "timeStamp": "Feb 12th 20",
+      "published": true,
+      "title": "test edit",
+      "description": "test edit",
+      "picURL": "placeholder.jpg",
+      "id": 1
+    },
+    {
+      "spotifyId": "tcarrol4",
+      "timeStamp": "Feb 11th 20",
+      "published": true,
+      "title": "test 2",
+      "description": "test 2",
+      "picURL": "placeholder.jpg",
+      "id": 2
+    },
+    {
+      "spotifyId": "tcarrol4",
+      "timeStamp": "Feb 11th 20",
+      "published": true,
+      "title": "test 3",
+      "description": "test 3",
+      "picURL": "placeholder.jpg",
+      "id": 3
+    },
+    {
+      "spotifyId": "tcarrol4",
+      "timeStamp": "Feb 11th 20",
+      "published": true,
+      "title": "test",
+      "description": "test",
+      "picURL": "placeholder.jpg",
+      "id": 4
+    }
   ],
   "songs": [
-    ""
+    {
+      "playlistId": 1,
+      "spotifySong": "song identifier",
+      "song_uri": "uri",
+      "id": 1
+    },
+    {
+      "playlistId": 1,
+      "spotifySong": "song identifier",
+      "song_uri": "uri",
+      "id": 2
+    },
+    {
+      "playlistId": 1,
+      "spotifySong": "song identifier",
+      "song_uri": "uri",
+      "id": 3
+    },
+    {
+      "playlistId": 2,
+      "spotifySong": "song identifier",
+      "song_uri": "uri",
+      "id": 5
+    },
+    {
+      "playlistId": 3,
+      "spotifySong": "song identifier",
+      "song_uri": "uri",
+      "id": 6
+    },
+    {
+      "playlistId": 3,
+      "spotifySong": "song identifier",
+      "song_uri": "uri",
+      "id": 7
+    },
+    {
+      "playlistId": 3,
+      "spotifySong": "song identifier",
+      "song_uri": "uri",
+      "id": 8
+    }
+  ],
+  "pins": [
+    {
+      "address": "default search term",
+      "latitude": 36.1278266,
+      "longitude": 36.1278266,
+      "playlistId": 1,
+      "id": 1
+    },
+    {
+      "address": "default search term",
+      "latitude": 36.1278266,
+      "longitude": 36.1278266,
+      "playlistId": 2,
+      "id": 2
+    },
+    {
+      "address": "default search term",
+      "latitude": 36.127834899999996,
+      "longitude": 36.127834899999996,
+      "playlistId": 3,
+      "id": 3
+    },
+    {
+      "address": "default search term",
+      "latitude": 36.1278352,
+      "longitude": 36.1278352,
+      "playlistId": 4,
+      "id": 4
+    }
   ]
 }

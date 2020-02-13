@@ -59,9 +59,9 @@ class UserDash extends Component {
                         <div className="mapWrapper">
                             <p>Lat</p>{userLocation.latitude}
                             <p>Long</p>{userLocation.longitude}
-                            {/* <Mapper
+                            <Mapper
                     //   props={this.state.buildings}
-                    /> */}
+                    />
                             <div class="add-Button">
                                 <Fab color="primary" aria-label="add" onClick={this.showAddForm}>
                                     <AddIcon />
@@ -71,7 +71,9 @@ class UserDash extends Component {
                     </div>
                     :
                     <CreateNew
-                        />}
+                    showAddForm={this.showAddForm}
+                    userLocation={this.state.userLocation}
+                    {...this.props}/>}
                  </>
         )
             }
