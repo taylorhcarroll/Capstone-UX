@@ -13,7 +13,7 @@
     "react-dom": "^16.8.4",
     "react-dropzone": "^10.1.10",
     "react-leaflet": "^2.6.1",
-    "react-router-dom": "^5.0.1",
+    "react-router-dom": "^7.5.2",
     "react-scripts": "2.1.8",
     "react-spotify-login": "^0.9.1",
     "reactstrap": "^8.4.1",
